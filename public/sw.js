@@ -23,29 +23,21 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return (
-        response ||
-        fetch(event.request).then((networkResponse) => {
-          return caches.open('pwa-cache').then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-          });
-        })
-      );
-    })
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.open('pwa-cache').then((cache) => {
+    caches.open('pwa-cache-v1').then((cache) => {
       return cache.match(event.request).then((response) => {
-        const fetchPromise = fetch(event.request).then((networkResponse) => {
+        // Si el recurso está en cache, devolverlo
+        if (response) {
+          return response;
+        }
+        // Si no está en cache, hacer la solicitud de red
+        return fetch(event.request).then((networkResponse) => {
+          // Guardar la respuesta en cache para futuras solicitudes
           cache.put(event.request, networkResponse.clone());
           return networkResponse;
+        }).catch((error) => {
+          // Si hay error en la red, puedes manejarlo aquí (por ejemplo, mostrar un recurso offline)
+          console.error('Fetch error: ', error);
         });
-        return response || fetchPromise;
       });
     })
   );

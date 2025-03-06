@@ -1,10 +1,10 @@
 # Evaluacion Modulo 6 Ejercicio 2
 
 ## 📖 Descripción
-En este ejercicio práctico, los estudiantes integrarán características básicas de una PWA
-(Progressive Web Application) en el proyecto de la web del hospital. El objetivo es configurar
-el archivo de manifiesto y registrar un Service Worker para mejorar la experiencia del
-usuario, haciendo la aplicación instalable y accesible offline.
+En este ejercicio práctico, los estudiantes deben configurar y utilizar opciones de
+almacenamiento web dentro de la web del hospital convertida en PWA, utilizando
+LocalStorage, SessionStorage o IndexedDB. Además, se ejecutarán pruebas con
+Lighthouse para validar el rendimiento y estado de la PWA.
 
 ![Inicio](public/assets/vista.png)
 
@@ -78,6 +78,10 @@ npm run dev
 ```
 
 Abre `http://localhost:5173` en tu navegador para visualizar la aplicación.
+
+### 📋 Implementación de Almacenamiento Web
+Se guardaron las citas medicas con LocalStorage
+![Inicio](public/assets/citas.png)
 
 
 ## 🔧 Tecnologías utilizadas
