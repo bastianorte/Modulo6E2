@@ -6,8 +6,6 @@ almacenamiento web dentro de la web del hospital convertida en PWA, utilizando
 LocalStorage, SessionStorage o IndexedDB. Además, se ejecutarán pruebas con
 Lighthouse para validar el rendimiento y estado de la PWA.
 
-![Inicio](public/assets/vista.png)
-
 ## 📁 Proyecto
 
 ```plaintext
@@ -79,7 +77,7 @@ npm run dev
 
 Abre `http://localhost:5173` en tu navegador para visualizar la aplicación.
 
-### 📋 Implementación de Almacenamiento Web
+### Implementación de Almacenamiento Web
 Se guardaron las citas medicas con LocalStorage
 ![Inicio](public/assets/citas.png)
 
