@@ -1,4 +1,4 @@
-# Evaluacion Modulo 6 Ejercicio 1
+# Evaluacion Modulo 6 Ejercicio 2
 
 ## 📖 Descripción
 En este ejercicio práctico, los estudiantes integrarán características básicas de una PWA
@@ -11,7 +11,7 @@ usuario, haciendo la aplicación instalable y accesible offline.
 ## 📁 Proyecto
 
 ```plaintext
-/Modulo6E1
+/Modulo6E2
 │
 ├── public
 │   ├── assets
@@ -56,13 +56,13 @@ usuario, haciendo la aplicación instalable y accesible offline.
 Clona este repositorio en tu máquina local:
 
 ```bash
-gh repo clone bastianorte/Modulo6E1
+gh repo clone bastianorte/Modulo6E2
 ```
 
 Navega hasta el directorio del proyecto:
 
 ```bash
-cd Modulo6E1
+cd Modulo6E2
 ```
 
 Instala las dependencias:
